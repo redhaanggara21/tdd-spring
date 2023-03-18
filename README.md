@@ -76,23 +76,14 @@ Start the server
 Takes two numbers and returns the sum.
 
 
-## Running Tests
+## Consul
 
-To run tests, run the following command
-
-```bash
-  npm run test
+```consul
+https://developer.hashicorp.com/consul
 ```
 
-
-## Usage/Examples
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
+```consul ui
+consul agent -ui -config-dir /opt/consul/config
 ```
 
 
