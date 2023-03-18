@@ -3,7 +3,7 @@
 
 - setup env
 ```bash
-    cp .env.example .env
+    
 ```
 - Install dependencies
 
