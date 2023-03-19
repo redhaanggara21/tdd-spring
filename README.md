@@ -76,7 +76,7 @@ Start the server
 Takes two numbers and returns the sum.
 
 
-## Consul
+## Consul Setup
 
 ```consul
 https://developer.hashicorp.com/consul
@@ -84,6 +84,11 @@ https://developer.hashicorp.com/consul
 
 ```consul ui
 consul agent -ui -config-dir /opt/consul/config
+consul agent -dev -bind 192.168.0.128
+consul agent -dev -bind (192.168.0.128 =  your ipaddress machine) 
+  ipconfig getifaddr en1 - Ethernet 
+  ipconfig getifaddr en0 - Wifi
+    http://localhost:8500/ui/dc1/services
 ```
 
 

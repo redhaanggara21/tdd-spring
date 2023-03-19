@@ -1,2 +1,11 @@
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_351.jdk/Contents/Home
 https://portal.cloud.hashicorp.com/orgs/a100bef8-c2d3-44be-8446-fd1385f65930/projects/1de4569f-ef9a-491f-b47f-636069de66d8
+
+MacBook - Consul
+ipconfig getifaddr en1 - Ethernet 
+ipconfig getifaddr en0 - Wifi
+
+Consul Command Start =
+consul agent -dev -bind 192.168.0.128 (192.168.0.128 - IP Add. for your Machine)
+
+Consul URL - http://localhost:8500/ui/dc1/services
