@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 @EnableConfigurationProperties(
-    ApplicationConfig.class
+    MyConfig.class
 )
 // public class SpringCrudApplication implements CommandLineRunner { 
 public class SpringCrudApplication { 
@@ -24,7 +24,7 @@ public class SpringCrudApplication {
     // }
 
     @Autowired
-    ApplicationConfig applicationConfig;
+    MyConfig applicationConfig;
     public static void main(String[] args) {
         SpringApplication.run(SpringCrudApplication.class, args);
         
