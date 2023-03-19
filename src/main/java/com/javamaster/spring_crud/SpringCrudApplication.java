@@ -1,25 +1,17 @@
 package com.javamaster.spring_crud;
 
-import java.util.Arrays;
-
-import org.slf4j.Logger; 
-import org.slf4j.LoggerFactory; 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.CommandLineRunner; 
 import org.springframework.boot.SpringApplication; 
-import org.springframework.boot.autoconfigure.SpringBootApplication; 
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.context.annotation.Profile;
-import org.springframework.core.env.Environment;
-import org.springframework.stereotype.Component;
-
-import javafx.application.Application;
-
-
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.web.bind.annotation.RestController; 
 
 
 @SpringBootApplication
+@RestController
+@EnableConfigurationProperties(
+    ApplicationConfig.class
+)
 // public class SpringCrudApplication implements CommandLineRunner { 
 public class SpringCrudApplication { 
     // private static final Logger logger = LoggerFactory.getLogger(Application.class); 
@@ -31,8 +23,11 @@ public class SpringCrudApplication {
     //     logger.info("{}", env.getProperty("spring.profiles.active")); 
     // }
 
+    @Autowired
+    ApplicationConfig applicationConfig;
     public static void main(String[] args) {
         SpringApplication.run(SpringCrudApplication.class, args);
+        
         // new SpringApplicationBuilder(Application.class)
         //         .profiles("dev", "prod")
         //         .run(args);
